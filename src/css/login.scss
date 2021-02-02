@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@300;400&display=swap");
+
+.solid-button {
+  padding: 12px 36px;
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+// Navigation
+
+.login {
+  height: 100vh;
+}
+
+.bg {
+  background-image: url("../images/login-cover.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+
+  button {
+    background-color: rgba(0, 136, 169, 1);
+    color: #0f1123;
+  }
+  button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+
+  li {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 20px;
+    letter-spacing: 2px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    transition: all 0.3s ease 0s;
+    border-radius: 50px;
+
+    a {
+      transition: all 0.3s ease 0s;
+      color: #fff;
+    }
+    a:hover {
+      color: #008889;
+    }
+  }
+  li:hover {
+    background: rgba(36, 28, 28, 0.6);
+  }
+  .menu-bar {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color: rgba(31, 30, 30, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    // display: none;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.logo {
+  cursor: pointer;
+  letter-spacing: 5px;
+  color: #fff;
+  font-family: "Potta One", cursive;
+}
+
+// Form
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+
+  //Login
+
+  .login-form {
+    padding: 5%;
+    background: rgba(31, 30, 30, 0.6);
+    border-radius: 20px;
+
+    input[type="email"],
+    input[type="password"] {
+      background: rgba(36, 28, 28, 0.6);
+      border: none;
+      position: relative;
+      display: block;
+      outline: none;
+      width: 400px;
+      height: 30px;
+      margin: 5% 0;
+      padding: 10px 20px;
+      letter-spacing: 2px;
+      font-family: "Roboto", sans-serif;
+      color: #008889;
+      border-radius: 50px;
+    }
+    ::placeholder {
+      color: #008889;
+      opacity: 0.8;
+    }
+
+    // Switch
+    .switch-label {
+      letter-spacing: 2px;
+      font-family: "Roboto", sans-serif;
+      color: #008889;
+      font-weight: 400;
+      font-size: 12px;
+      position: relative;
+      left: 20px;
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 29px;
+        height: 15px;
+        left: 10px;
+
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(36, 28, 28, 0.6);
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+          border: 1px solid #008889;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 13.5px;
+          width: 13.5px;
+          left: 0px;
+          bottom: -0.5px;
+          background-color: #fff;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+
+        input:checked + .slider {
+          background-color: rgba(0, 136, 169, 1);
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196f3;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(13.5px);
+          -ms-transform: translateX(13.5px);
+          transform: translateX(13.5px);
+        }
+        /* Rounded sliders */
+        .round {
+          border-radius: 15px;
+        }
+
+        .round:before {
+          border-radius: 30px;
+        }
+      }
+    }
+
+    input[type="submit"] {
+      background-color: rgba(0, 136, 169, 1);
+      color: #0f1123;
+      position: relative;
+      left: 30%;
+    }
+    input[type="submit"]:hover {
+      background-color: rgba(0, 136, 169, 0.8);
+    }
+  }
+
+  //Alt Login
+  .alt-login-container {
+    position: relative;
+    right: 19%;
+    .social-btn {
+      width: 184px;
+      height: 42px;
+      background-color: transparent;
+      border-radius: 20px;
+      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+      padding: 10% 20%;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      .social-icon-wrapper {
+        position: absolute;
+        margin-top: 1px;
+        margin-left: 1px;
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: transparent;
+      }
+      .social-icon {
+        position: absolute;
+        margin-top: 11px;
+        margin-left: 5px;
+        width: 18px;
+        height: 18px;
+      }
+      .btn-text {
+        float: right;
+        margin: 11px 11px 0 0;
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+      }
+    }
+
+    .social-btn:hover {
+      background: rgba(36, 28, 28, 0.6);
+    }
+  }
+}
+
+footer {
+  color: #fff;
+  left: 44%;
+  bottom: 10%;
+  position: absolute;
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .login-navbar {
+    li {
+      display: none;
+    }
+    .menu-bar {
+      display: inline-block;
+    }
+  }
+}
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .login-navbar {
+    padding: 0;
+  }
+  .logo {
+    color: black;
+  }
+  .login-form {
+    padding: 0;
+    display: none;
+  }
+}
