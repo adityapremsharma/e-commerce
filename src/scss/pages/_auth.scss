@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@300;400&display=swap");
+
+.auth {
+  background-image: url("../../images/login-cover.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &__bg-img {
+    height: 100vh;
+  }
+  &__nav {
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form-row {
+    position: relative;
+    padding: 10rem;
+  }
+  &__form {
+    position: relative;
+    background-color: $transparent-black;
+    border-radius: 2rem;
+    height: auto;
+    width: 70rem;
+    padding: 4rem 10rem;
+    text-align: center;
+  }
+  &__submit {
+    margin: 0 2rem;
+    color: $blue;
+    letter-spacing: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
+  &__forgot-password {
+    color: $background-blue;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__alt-login {
+    border-radius: 2rem;
+    height: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .auth {
+  
+    &__form-row {
+      padding: 2rem;
+    }
+    &__form {
+      width: 100%;
+      padding: 1.75rem 2rem;
+      position: relative;
+    }
+    &__submit {
+      margin: 0 0 2rem 2rem;
+    }
+    &__forgot-password {
+      font-size: 1rem;
+    }
+
+    &__alt-login {
+      height: 30rem;
+      margin: 3rem auto;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .auth {
+    &__form-row {
+      padding: 2rem;
+    }
+    &__form {
+      width: 100%;
+      padding: 1.75rem 2rem;
+      position: relative;
+    }
+    &__submit {
+      margin: 0 0 2rem 2rem;
+    }
+    &__forgot-password {
+      font-size: 1rem;
+    }
+
+    &__alt-login {
+      height: 20rem;
+      margin: 1rem auto;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+/* Phone-Tablet (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+  .auth {
+    &__form-row {
+      padding: 2rem;
+    }
+    &__form {
+      width: 100%;
+      padding: 1.75rem 2rem;
+      position: relative;
+      padding: 4rem 4rem;
+    }
+    &__submit {
+      margin: 0 0 2rem 2rem;
+    }
+    &__forgot-password {
+      font-size: 1rem;
+    }
+
+    &__alt-login {
+      height: 20rem;
+      margin: -5rem auto;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+/* Tablet-Laptop (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1440px) {
+  .auth {
+    &__alt-login {
+      justify-content: center;
+    }
+  }
+}

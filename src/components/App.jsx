@@ -1,6 +1,6 @@
 import React from 'react';
 import Base from "./Base"
-import "../css/app.scss";
+import "../scss/main.scss"
 
 function App() {
   return (

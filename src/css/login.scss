@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@300;400&display=swap");
 
+$blue: #008889;
+$background-blue: rgba(0, 136, 169, 1);
+$transparent-black: rgba(31, 30, 30, 0.6);
+$transparent-black-2: rgba(36, 28, 28, 0.6);
+$white: #fff;
+
 .solid-button {
   padding: 12px 36px;
   letter-spacing: 2px;
@@ -31,7 +37,7 @@
   padding: 30px 10%;
 
   button {
-    background-color: rgba(0, 136, 169, 1);
+    background-color: $background-blue;
     color: #0f1123;
   }
   button:hover {
@@ -50,20 +56,20 @@
 
     a {
       transition: all 0.3s ease 0s;
-      color: #fff;
+      color: $white;
     }
     a:hover {
-      color: #008889;
+      color: $blue;
     }
   }
   li:hover {
-    background: rgba(36, 28, 28, 0.6);
+    background: $transparent-black-2;
   }
   .menu-bar {
     width: 20px;
     height: 20px;
     padding: 10px;
-    background-color: rgba(31, 30, 30, 0.6);
+    background-color: $transparent-black;
     border-radius: 50%;
     cursor: pointer;
     // display: none;
@@ -77,7 +83,7 @@
 .logo {
   cursor: pointer;
   letter-spacing: 5px;
-  color: #fff;
+  color: $white;
   font-family: "Potta One", cursive;
 }
 
@@ -93,12 +99,12 @@
 
   .login-form {
     padding: 5%;
-    background: rgba(31, 30, 30, 0.6);
+    background: $transparent-black;
     border-radius: 20px;
 
     input[type="email"],
     input[type="password"] {
-      background: rgba(36, 28, 28, 0.6);
+      background: $transparent-black-2;
       border: none;
       position: relative;
       display: block;
@@ -109,11 +115,11 @@
       padding: 10px 20px;
       letter-spacing: 2px;
       font-family: "Roboto", sans-serif;
-      color: #008889;
+      color: $blue;
       border-radius: 50px;
     }
     ::placeholder {
-      color: #008889;
+      color: $blue;
       opacity: 0.8;
     }
 
@@ -121,7 +127,7 @@
     .switch-label {
       letter-spacing: 2px;
       font-family: "Roboto", sans-serif;
-      color: #008889;
+      color: $blue;
       font-weight: 400;
       font-size: 12px;
       position: relative;
@@ -146,10 +152,10 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(36, 28, 28, 0.6);
+          background: $transparent-black-2;
           -webkit-transition: 0.4s;
           transition: 0.4s;
-          border: 1px solid #008889;
+          border: 1px solid $blue;
         }
 
         .slider:before {
@@ -159,13 +165,13 @@
           width: 13.5px;
           left: 0px;
           bottom: -0.5px;
-          background-color: #fff;
+          background-color: $white;
           -webkit-transition: 0.4s;
           transition: 0.4s;
         }
 
         input:checked + .slider {
-          background-color: rgba(0, 136, 169, 1);
+          background-color: $background-blue;
         }
 
         input:focus + .slider {
@@ -189,7 +195,7 @@
     }
 
     input[type="submit"] {
-      background-color: rgba(0, 136, 169, 1);
+      background-color: $background-blue;
       color: #0f1123;
       position: relative;
       left: 30%;
@@ -198,55 +204,54 @@
       background-color: rgba(0, 136, 169, 0.8);
     }
   }
+}
 
-  //Alt Login
-  .alt-login-container {
-    position: relative;
-    right: 19%;
-    .social-btn {
-      width: 184px;
-      height: 42px;
+.alt-login-container {
+  position: relative;
+  right: 19%;
+  .social-btn {
+    width: 184px;
+    height: 42px;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 10% 20%;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    .social-icon-wrapper {
+      position: absolute;
+      margin-top: 1px;
+      margin-left: 1px;
+      width: 40px;
+      height: 40px;
+      border-radius: 2px;
       background-color: transparent;
-      border-radius: 20px;
-      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
-      padding: 10% 20%;
-      cursor: pointer;
-      transition: all 0.3s ease 0s;
-      .social-icon-wrapper {
-        position: absolute;
-        margin-top: 1px;
-        margin-left: 1px;
-        width: 40px;
-        height: 40px;
-        border-radius: 2px;
-        background-color: transparent;
-      }
-      .social-icon {
-        position: absolute;
-        margin-top: 11px;
-        margin-left: 5px;
-        width: 18px;
-        height: 18px;
-      }
-      .btn-text {
-        float: right;
-        margin: 11px 11px 0 0;
-        color: #fff;
-        font-size: 14px;
-        letter-spacing: 0.2px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-      }
     }
+    .social-icon {
+      position: absolute;
+      margin-top: 11px;
+      margin-left: 5px;
+      width: 18px;
+      height: 18px;
+    }
+    .btn-text {
+      float: right;
+      margin: 11px 11px 0 0;
+      color: $white;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+    }
+  }
 
-    .social-btn:hover {
-      background: rgba(36, 28, 28, 0.6);
-    }
+  .social-btn:hover {
+    background: $transparent-black-2;
   }
 }
 
 footer {
-  color: #fff;
+  color: $white;
   left: 44%;
   bottom: 10%;
   position: absolute;
@@ -265,9 +270,15 @@ footer {
       display: inline-block;
     }
   }
+  .login-container {
+    display: block;
+  }
 }
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .login-container {
+    display: block;
+  }
 }
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
@@ -280,5 +291,8 @@ footer {
   .login-form {
     padding: 0;
     display: none;
+  }
+  .login-container {
+    display: block;
   }
 }

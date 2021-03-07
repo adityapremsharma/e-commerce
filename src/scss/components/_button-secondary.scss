@@ -1,0 +1,19 @@
+.btn-secondary {
+  background-color: $background-blue;
+  color: #0f1123;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  letter-spacing: 0.2rem;
+  transition: all 0.3s;
+  font-size: 1.2rem;
+  //   border: none;
+}
+
+.btn-secondary:hover {
+  background-color: rgba($background-blue, 0.8);
+}
+
+.btn-secondary:focus {
+  outline: none;
+}
